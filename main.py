@@ -52,11 +52,11 @@ def main():
 
         # Detect collision with floor
         if ball.ycor() < -390:
-            # game_is_on = False
-            # text.game_over()
-            ball.flip_y()
+            game_is_on = False
+            text.game_over()
 
         if len(wall) == 0:
+            game_is_on = False
             text.winner()
 
         # Detect collision with paddle
